@@ -1,45 +1,307 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 
-<head>
-  <title>William Dayrit</title>
-  <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+  <html>
+
+    <head>
+
+      <meta charset="utf-8">
+      <title>High / Low: A Drinking Card Game</title>
+      <link rel="stylesheet" type="text/css" href="css/cards.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+
+      <link href='http://fonts.googleapis.com/css?family=Carter+One' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
+
+      <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+    </head>
+
+    <body>
+
+      <div class="header">
+          <header> High / Low </header>
+          <h1>A DRINKING GAME</h1>
+
+      </div>
+
+      <div class="container">
+        <div class="deck">
+          <div id="deal">
+            <button id="dealButton" value="DEAL">DEAL</button>
+          </div>
+          <div class="card" id="dealtCard">
+          </div>
+        </div>
+        <div class="stack">
+          <div class="cardstackrow">
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+          </div>
+            <div class="cardstackrow">
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+            <div class="cards"></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="playerTurn">
+        PLAYER 1'S TURN
+      </div>
+
+      <div class="controls">
+        <div class="buttons" id="high">
+          <h2>HIGH</h2>
+        </div>
+        <div class="buttons" id="low">
+          <h2>LOW</h2>
+        </div>
+        <div class="buttons" id="red">
+          <h2>RED</h2>
+        </div>
+        <div class="buttons" id="black">
+          <h2>BLACK</h2>
+        </div>
+        <div class="buttons" id="in">
+          <h2>IN</h2>
+        </div>
+        <div class="buttons" id="out">
+          <h2>OUT</h2>
+        </div>
+        <div class="buttons" id="spade">
+          <h2>♠</h2>
+        </div>
+        <div class="buttons" id="club">
+          <h2>♣</h2>
+        </div>
+        <div class="buttons" id="heart">
+          <h2>♥</h2>
+        </div>
+        <div class="buttons" id="diamond">
+          <h2>♦</h2>
+        </div>
+        <div class="buttons" id="pass">
+          <h2>PASS</h2>
+        </div>
+      </div>
 
 
-<body>
-  <header>
-    <img src="me.jpg"></img>
-    <h1>William Dayrit</h1>
-    <h3>Contact Me</h3>
-    <h5>909.714.2688<br />
-      william.dayrit@gmail.com<br />
-    <a href="https://www.linkedin.com/pub/william-dayrit/36/227/196"><img src="http://www.eeginc.com/images/linkedin-icon-grey-white-letter.png"/></a>
-    <a href="https://www.facebook.com/willdayrit"><img src="http://www.depauw.edu/images/social/gray-facebook-icon-30x30.png"/></a>
-    <a href="https://github.com/w-dayrit"><img src="github.png"></a>
-  </header>
+      <div class="playerStacks">
+        <div class="player" id="playerOne">
+          <h2>PLAYER 1</h2>
+          <div class="playerstackrow">
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+            <div class="cards playerOneStack"></div>
+          </div>
+        </div>
+        <div class="player" id="playerTwo">
+          <h2>PLAYER 2</h2>
+          <div class="playerstackrow">
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+          </div>
+          <div class="playerstackrow">
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+            <div class="cards playerTwoStack"></div>
+          </div>
+        </div>
+      </div>
 
-  <div class="bio">
-    <p>About Me<br />
-      Born in the Philippines, raised in New Jersey, residing in California. Graduated from UCI with a degree in Biological Sciences. Currently working in a Chemistry lab pretending I'm Heisenberg. I have a trusty Shiba Inu sidekick named Stella. In my spare time, I lift heavy things up and put them down. Also, I'm Challenged in League of Legends.
-    </p>
-  </div>
+      <script src='js/main.js'>
+      </script>
+    </body>
 
-  <div class="lifting">
-    <p>Lifting Info<br />
-      Bench 5x5 PR: 195#<br />
-      Squat 5x5 PR: 225#<br />
-      Deadlift 1x5 PR: 300#
-    </p>
-  </div>
-
-  <div class="lol">
-    <p>League of Legends Info<br />
-      IGN: Gowilla<br />
-      Division: Silver V<br />
-      Main Role: ADC<br />
-      Secondary Role: Mid
-  </div>
-
-</body>
+  </html>

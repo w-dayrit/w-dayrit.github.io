@@ -42,18 +42,18 @@ img {
   border-radius: 20px;
 }
 
-.bio {
+.box {
+  margin: 20px auto;
+}
+
+#bio {
   background-image: url("stella.jpg");
-  margin: 20px auto;
-  position: relative;
 }
 
-.lifting {
+#lifting {
   background-image: url("gym.jpg");
-  margin: 20px auto;
 }
 
-.lol {
+#lol {
   background-image: url("LoL-Banner.png");
-  margin: 20px auto;
 }
