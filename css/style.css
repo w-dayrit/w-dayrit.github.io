@@ -5,6 +5,15 @@ body{
   background-image: url("../bg.jpg");
 }
 
+.rules {
+  position: absolute;
+  width:325px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  margin-top: 100px;
+}
+
 .header {
   margin: 0px auto;
   width: 300px;

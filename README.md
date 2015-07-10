@@ -29,7 +29,7 @@ An incorrect guess will move the stack to the player's hand below the buttons.
 IV. Get Started
 -
 
-Go to (site address) and start playing!
+Go to http://w-dayrit.github.io/ and start playing!
 
 V. Next Steps
 -
